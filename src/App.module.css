@@ -1,4 +1,3 @@
-
 #root {
   display: flex;
   flex-direction: column;
@@ -8,7 +7,7 @@
   width: 100%;
   height: 100%;
 }
-.app-container {
+.appContainer {
   
   display: flex;
   flex-direction: column;
@@ -35,12 +34,12 @@
     opacity: 0;
   }
 }
-.app-container.drop { 
+.appContainer.drop { 
   transform: translateY(calc(100vh));
   opacity: 1;
   animation: fadeOut 0.5s forwards;
 }
-.card-grid {
+.cardGrid {
   box-sizing: border-box;
   perspective: 1000px;
   aspect-ratio: 1 / 1;
@@ -54,7 +53,7 @@
   border-radius: 5px;
   background-color: #ffffd5;
 }
-.info-container {
+.infoContainer {
   background-color: white;
   display: flex;
   justify-content: center;
@@ -64,10 +63,10 @@
   user-select: none;
 }
 @media all and (orientation: landscape) {
-  .info-container {
+  .infoContainer {
     height: 10%;
   }
-  .card-grid {
+  .cardGrid {
     height: 85vh;
     background-color: rgb(252, 225, 213);
   }
@@ -76,10 +75,10 @@
   }
 }
 @media all and (orientation: portrait) {
-  .info-container {
+  .infoContainer {
     height: 20%;
   }
-  .card-grid {
+  .cardGrid {
     width: 85vw;
   }
   .card {
@@ -97,7 +96,7 @@
   background-color: #d4d4d4;
 }
 
-.card-container {
+.cardContainer {
   box-sizing: border-box;
   aspect-ratio: 1 / 1;
   background-color: #f5f5f5;
@@ -109,7 +108,7 @@
   overflow: hidden;
 }
 
-.card-border-red {
+.cardBorderRed {
 
   box-sizing: border-box;
   width: 100%;
@@ -118,7 +117,7 @@
   border-color: #ff9e9e;
   border-width: 4px;
 }
-.card-border-white {
+.cardBorderWhite {
 
   box-sizing: border-box;
   width: 100%;
@@ -129,11 +128,11 @@
 }
 
 
-.rotate-div.rotate {
+.rotateDiv.rotate {
   transform: rotateY(180deg);
 }
 
-.restart-btn {
+.restartBtn {
   background-color: #d4d4d4;
   border-style: solid;
   border-width: 2px;

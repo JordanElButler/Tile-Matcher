@@ -1,10 +1,10 @@
-import React, { useContext }  from 'react';
-import '../App.css';
+import styles from '../App.module.css';
+
 function WinBanner() {
 	
 	return (
-		<div className={'win-banner'}>
-			All done
+		<div className={styles.rotateDiv}>
+			<h1>You Win!</h1>
 		</div>
 	)
 }

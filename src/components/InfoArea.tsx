@@ -1,14 +1,12 @@
 import React from 'react';
-import '../App.css';
+import styles from '../App.module.css';
 
 function InfoArea({mistakes}: {mistakes: number}) {
-
   return (
-    <div 
-    className={'info-area'}>
+    <div className={styles.infoArea}>
       {`Mistakes made: ${mistakes}`}
     </div>
   )
-  
 }
+
 export default InfoArea;

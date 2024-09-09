@@ -7,7 +7,7 @@ import useAnimationCounter from '../hooks/useAnimationCounter';
 import useGame from '../hooks/useGame';
 import appConfig from '../config';
 
-import '../App.css'
+import styles from '../App.module.css'
 
 const emojis = [
   '🍀', '🔔','🍒','⚜️', '🍇','💎', '🎱', '🥩',
@@ -110,7 +110,7 @@ function CardGrid({remount}: {remount: any}) {
    
     setInteraction(false);
     if (appRef.current) {
-      appRef.current.classList.add('drop'); 
+      appRef.current.classList.add(styles.drop); 
     }
     setTimeout(() => {
       remount();
@@ -118,8 +118,8 @@ function CardGrid({remount}: {remount: any}) {
   }
   
   return (
-    <div ref={appRef} className={'app-container'}>
-      <div className={'info-container'}>
+    <div ref={appRef} className={styles.appContainer}>
+      <div className={styles.infoContainer}>
         {openingAnimation ?
           <TimerDisplay count={time} /> : 
            game.checkWinCondition() ?
@@ -127,10 +127,10 @@ function CardGrid({remount}: {remount: any}) {
           <InfoArea mistakes={game.getMistakes()} />
     }     
       </div>
-    <div onClick={onClick} className={'card-grid'}>
+    <div onClick={onClick} className={styles.cardGrid}>
       {cardi}
     </div>
-    <button onClick={restart} className={'restart-btn'}>Restart</button>
+    <button onClick={restart} className={styles.restartBtn}>Restart</button>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CardGrid from './components/CardGrid';
-import './App.css'
+
 
 export default function App() {
   

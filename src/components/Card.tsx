@@ -1,6 +1,6 @@
 import { useState, useContext, useEffect, useRef } from 'react';
 import defaultConfig from '../config';
-import '../App.css';
+import styles from '../App.module.css';
 
 function Card({x, y, emoji, over, flipCard}: {x: number, y: number, emoji: string, over: boolean, flipCard: any}) {
 
@@ -23,13 +23,13 @@ function Card({x, y, emoji, over, flipCard}: {x: number, y: number, emoji: strin
   useEffect(() => {
     if (myRef.current) {
       if (over) {
-        myRef.current.classList.remove('rotate');
+        myRef.current.classList.remove(styles.rotate);
 
         setTimeout(() => {
           setShowing(true);
         }, flipDuration * 1000 /2);
       } else {
-        myRef.current.classList.add('rotate');
+        myRef.current.classList.add(styles.rotate);
 
         setTimeout(() => {
           setShowing(false);
@@ -39,22 +39,20 @@ function Card({x, y, emoji, over, flipCard}: {x: number, y: number, emoji: strin
   }, [over]);
   
   
-  const classList = `card rotate-div`;
+  const classList = `${styles.card} ${styles.rotateDiv}`;
 
  
   return (
     <div ref={myRef} onClick={onClick} className={classList} style={style}>
-      <div className="card-border-red">
-        <div className="card-border-white">
-          <div className="card-border-red">
-            <div  className={'card-container'}>
+      <div className={styles.cardBorderRed}>
+        <div className={styles.cardBorderWhite}>
+          <div className={styles.cardBorderRed}>
+            <div className={styles.cardContainer}>
               {showing ? emoji : ''}   
-                
             </div>
           </div>
         </div>
       </div>
-
     </div>
   )
 }
